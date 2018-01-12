@@ -10,9 +10,16 @@ import org.json.simple.JSONObject;
 public class SearchItem {
     private String name; // specify name of the item
     private String genre; // specify genre of the item (book, music, etc.
-    private String format; // specify forant of the item (CD, audio, etc.)
+    private String format; // specify format of the item (CD, audio, etc.)
     private int year; // specify year when item was created
 
+
+    public SearchItem(String name, String genre, String format, int year){
+        this.name = name;
+        this.genre = genre;
+        this.format = format;
+        this.year = year;
+    }
     public String getName() {
         return name;
     }

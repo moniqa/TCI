@@ -6,28 +6,26 @@ public class SearchItemMovie extends SearchItem {
     private String director;       //specifies director(s) of the movie
     private List<String> writers;  //specifies writer(s) of the movie
     private List<String> stars;    //specifies star(s) of the movie
-    public String getDirector() {
-        return director;
+
+    public SearchItemMovie(String name, String genre, String format, int year,
+                           String director,List<String> writers,  List<String> stars ) {
+        super(name, genre, format, year);
+        this.director = director;
+        this.writers = writers;
+        this.stars=stars;
     }
 
-    public void setDirector(String director) {
-        this.director = director;
+    public String getDirector() {
+        return director;
     }
 
     public List<String> getWriters() {
         return writers;
     }
 
-    public void setWriters(List<String> writers) {
-        this.writers = writers;
-    }
 
     public List<String> getStars() {
         return stars;
-    }
-
-    public void setStars(List<String> stars) {
-        this.stars = stars;
     }
 
     @Override

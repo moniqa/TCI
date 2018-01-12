@@ -7,14 +7,15 @@ import java.util.List;
 public class SearchItemMusic extends SearchItem {
     private List<String> artist; //
 
-    public List<String> getArtist() {
-        return artist;
-    }
-
-    public void setArtist(List<String> artist) {
+    public SearchItemMusic(String name, String genre, String format, int year,
+                           List<String> artist) {
+        super(name, genre, format, year);
         this.artist = artist;
     }
 
+    public List<String> getArtist() {
+        return artist;
+    }
 
     @Override
     public JSONObject convertToJSon() {
